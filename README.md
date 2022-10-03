@@ -36,7 +36,7 @@ https://www.nikse.dk/subtitleedit/help#commandline
 
 Run the command (while in parent folder of subtitle folder), example:  
 ```
-docker run --rm -it -v $(pwd)/subtitles:/subtitles subtitle-convert:1.0 /convert sample.srt pac
+docker run --rm -it -v $(pwd)/subtitles:/subtitles wauterdebruyne/subtitle-convert:1.0 /convert sample.srt pac
 ```
 
 _("/convert" and "-convert" argument styles are supported, either will work)_
@@ -45,19 +45,19 @@ _("/convert" and "-convert" argument styles are supported, either will work)_
 
 By default the container is adding the '/subtitle' folder as input folder and the '/subtitle/out' folder as output folder, however, you can also manually specify these parameters, for example:
 ```
-docker run --rm -it -v /mnt:/mnt subtitle-convert:1.0 /convert sample.srt PAC -inputfolder:/mnt/subtitles/in -outputfolder:/mnt/export
+docker run --rm -it -v /mnt:/mnt wauterdebruyne/subtitle-convert:1.0 /convert sample.srt PAC -inputfolder:/mnt/subtitles/in -outputfolder:/mnt/export
 ```
 
 #### Get list of supported formats:
 
 Either check the format names in the subtitle edit UI, run the following docker command, or consult the output below:   
 ```
-docker run --rm -it -v $(pwd)/subtitles:/subtitles subtitle-convert:1.0 /convert /list
+docker run --rm -it -v $(pwd)/subtitles:/subtitles wauterdebruyne/subtitle-convert:1.0 /convert /list
 ```
 
 Any format name from the list should work, for example:
 ```
-docker run --rm -it -v $(pwd)/subtitles:/subtitles subtitle-convert:1.0 /convert sample.srt iTunesTimedText
+docker run --rm -it -v $(pwd)/subtitles:/subtitles wauterdebruyne/subtitle-convert:1.0 /convert sample.srt iTunesTimedText
 ```
 
 Current list of supported formats:
