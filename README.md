@@ -1,6 +1,6 @@
 # subtitle-convert-docker
-  Docker container for subtitle conversion, using Subtitle Edit.
-**Deprecated, use https://github.com/Wauter/subtitleedit-cli-docker instead**
+  Docker container for subtitle conversion, using Subtitle Edit.   
+**Deprecated, use https://github.com/Wauter/subtitleedit-cli-docker instead (unless you need anything bitmap related incl. OCR.)**
 
 ## Introduction
 This is a solution for converting between subtitles formats using Subtitle Edit's commandline convert tool. Specifically, I needed a way to automate converting from and to Screen subtitling system's .pac format. Subtitle Edit seems to have good supported, stable code base and active developemnt.
